@@ -1,0 +1,22 @@
+{
+    "name": "indominus/contact-form",
+    "description": "Contact Form for testing Swiftmailer and PHPMailer with Silex framework",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zlatin Hristov",
+            "email": "about@z-latko.info"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dev\\": "src"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "silex/silex": "~2.0",
+        "twig/twig": "^1.35"
+    }
+}
