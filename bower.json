@@ -1,0 +1,28 @@
+{
+  "name": "contact-form",
+  "homepage": "https://github.com/indominus/contact-form",
+  "authors": [
+    "Zlatin Hristov <about@z-latko.info>"
+  ],
+  "description": "Contact Form Examples with Swiftmailer and PHPMailer",
+  "main": "index.php",
+  "keywords": [
+    "phpmailer",
+    "swiftmailer",
+    "slim"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.2.1",
+    "popper.js": "^1.14.6"
+  }
+}

@@ -1,14 +1,17 @@
 <?php
 include_once './vendor/autoload.php';
 
-$app = (new Silex\Application(array('debug' => true)));
+// start sessions
+session_start();
 
-$app->register(new \Silex\Provider\TwigServiceProvider(),[
-    'twig.path' => 'resources/views'
-]);
+// load env 
+(new Dotenv\Dotenv(__DIR__))->load();
 
-$app->match('/', function() use ($app) {
-    return (new Dev\Controller\MainController())->contactFormAction($app);
-})->bind('homepage');
+// initialize application
+$app = new \Slim\App(new Slim\Container(include './app/config/container.php'));
 
+// define routes
+$app->map(['GET', 'POST'], '/', App\Controller\HomeController::class)->setName('homepage');
+
+// run application
 $app->run();

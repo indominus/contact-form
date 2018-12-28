@@ -1,7 +1,21 @@
 {
     "name": "indominus/contact-form",
-    "description": "Contact Form for testing Swiftmailer and PHPMailer with Silex framework",
+    "description": "Contact Form Examples with Swiftmailer and PHPMailer",
     "type": "project",
+    "require": {
+        "slim/slim": "^3.11",
+        "slim/twig-view": "^2.4",
+        "slim/flash": "^0.4.0",
+        "vlucas/phpdotenv": "^2.5",
+        "monolog/monolog": "^1.24",
+        "symfony/form": "^4.2",
+        "symfony/twig-bridge": "^4.2",
+        "doctrine/orm": "^2.6",
+        "symfony/validator": "^4.2",
+        "symfony/security-csrf": "^4.2",
+        "phpmailer/phpmailer": "^6.0",
+        "swiftmailer/swiftmailer": "^6.0"
+    },
     "license": "MIT",
     "authors": [
         {
@@ -9,14 +23,10 @@
             "email": "about@z-latko.info"
         }
     ],
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Dev\\": "src"
+            "App\\": "src/App"
         }
-    },
-    "minimum-stability": "stable",
-    "require": {
-        "silex/silex": "~2.0",
-        "twig/twig": "^1.35"
     }
 }

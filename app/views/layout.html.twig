@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <link href="{{ base_url() }}/assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+
+        <link rel="stylesheet" href="{{ base_url() }}/assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="{{ base_url() }}/assets/css/common.css" />
+
+        <title>Contact Form</title>
+    </head>
+
+    <body>
+
+        <div class="container pt-5">
+
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#contact-form" role="tab">
+                        <img src="{{ base_url() }}/assets/img/e_mail.png" class="img-fluid" />
+                    </a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="switch-form">
+
+                <div class="tab-pane pt-3 fade show active" id="swiftmailer" role="tabpanel">
+
+                    {{ form_start(form) }}
+
+                    {{ form_row(form.sender) }}
+                    {{ form_row(form.receiver) }}
+                    {{ form_row(form.subject) }}
+                    {{ form_row(form.message) }}
+
+                    <div class="form-group row">
+                        <div class="col-10 offset-2 text-right">
+                            <span>изпрати със</span>
+                            {{ form_widget(form.swiftmailer) }}
+                            <span>или</span>
+                            {{ form_widget(form.phpmailer) }}
+                        </div>
+                    </div>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="{{ base_url() }}/assets/lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ base_url() }}/assets/lib/popper.js/dist/umd/popper.min.js"></script>
+        <script type="text/javascript" src="{{ base_url() }}/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ base_url() }}/assets/js/common.js"></script>
+        
+    </body>
+
+</html>
