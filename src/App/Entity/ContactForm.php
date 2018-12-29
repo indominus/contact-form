@@ -42,7 +42,7 @@ class ContactForm
      *
      * @var string
      * 
-     * @Column(type="string", nullable=true)
+     * @Column(type="text", nullable=true)
      */
     protected $status;
 
